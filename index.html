@@ -2,106 +2,224 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escápate este Verano</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verano Épico - Tu Próxima Aventura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to bottom right, #ffeaa7, #fab1a0);
-      color: #2d3436;
+      background: linear-gradient(to bottom, #fffde7, #ffffff);
+      color: #333;
     }
+
     header {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
       color: white;
-      padding: 80px 20px;
+      padding: 5rem 2rem;
       text-align: center;
+      animation: fadeIn 2s ease-in;
     }
+
     header h1 {
-      font-size: 3em;
-      margin: 0;
-      text-shadow: 2px 2px 5px #000;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
     }
+
     header p {
-      font-size: 1.5em;
-      margin-top: 10px;
+      font-size: 1.4rem;
     }
+
     nav {
-      background: #fdcb6e;
+      background: white;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 15px;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
+
     nav a {
-      text-decoration: none;
-      color: #2d3436;
+      color: #ff7e5f;
       font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
     }
+
     nav a:hover {
-      color: #d63031;
+      color: #ff5722;
     }
-    .section {
-      padding: 40px 20px;
+
+    section {
+      padding: 4rem 2rem;
       text-align: center;
     }
-    .section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+
+    h2 {
+      font-size: 2.7rem;
+      margin-bottom: 2rem;
+      color: #ff7e5f;
     }
+
     .destinos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
-    .destino {
+
+    .card {
       background: white;
       border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
-    .destino:hover {
-      transform: scale(1.03);
+
+    .card:hover {
+      transform: translateY(-5px);
     }
-    .destino img {
+
+    .card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
     }
-    .destino h3 {
-      margin: 15px 0 10px;
+
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.5rem;
+      color: #e65100;
     }
-    .destino p {
-      padding: 0 15px 15px;
-      font-size: 0.95em;
+
+    .card p {
+      padding: 0 1rem 1rem;
+      font-size: 1rem;
+      color: #555;
     }
+
     .btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #0984e3;
+      margin: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #ff7043;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 30px;
+      font-weight: bold;
       transition: background 0.3s;
     }
+
     .btn:hover {
-      background: #74b9ff;
+      background: #e64a19;
+    }
+
+    .tips {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tips li {
+      background: #fff3e0;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: 6px solid #ff9800;
+      list-style: none;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #ff5722;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .mapa {
+      margin-top: 2rem;
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>¡Escápate este verano!</h1>
-    <p>Descubre destinos increíbles y ofertas para tus vacaciones</p>
+    <h1>Verano Épico 2025 🌞</h1>
+    <p>Descubre los mejores destinos, consejos y ofertas para unas vacaciones inolvidables</p>
   </header>
+
   <nav>
     <a href="#destinos">Destinos</a>
-    <a href="#ofertas">Ofertas</a>
     <a href="#tips">Consejos</a>
+    <a href="#ofertas">Ofertas</a>
   </nav>
-  <section class="section" id="destinos">
-    <h2>Destinos Recomendados</h2>
+
+  <section id="destinos">
+    <h2>🌴 Destinos Recomendados</h2>
     <div class="destinos">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x200/?beach,spain" alt="Playa en España">
+        <h3>Costa del Sol</h3>
+        <p>Soleada todo el año, con increíbles playas, vida nocturna y tapas andaluzas.</p>
+        <a class="btn" href="https://www.booking.com" target="_blank">Reservar</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x200/?greece,island" alt="Grecia">
+        <h3>Islas Griegas</h3>
+        <p>Explora Santorini o Mykonos, entre casas blancas y mar turquesa.</p>
+        <a class="btn" href="https://www.booking.com" target="_blank">Ver Hotel</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x200/?bali,beach" alt="Bali">
+        <h3>Bali</h3>
+        <p>Una joya del sudeste asiático: naturaleza, templos, surf y tranquilidad.</p>
+        <a class="btn" href="https://www.booking.com" target="_blank">Explorar</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips">
+    <h2>🎒 Consejos para Viajeros</h2>
+    <div class="tips">
+      <ul>
+        <li>📅 Planifica con anticipación y evita fechas pico para ahorrar dinero.</li>
+        <li>💡 Utiliza Booking, Skyscanner y Kayak para comparar precios.</li>
+        <li>🚗 Considera alquilar coche en destino para explorar libremente.</li>
+        <li>📷 Aprovecha Instagram para inspirarte y descubrir rincones ocultos.</li>
+        <li>💧 Hidrátate, usa protector solar y no olvides un botiquín básico.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ofertas">
+    <h2>🔥 Ofertas Exclusivas</h2>
+    <p>Consigue descuentos de hasta un 40% en tus vacaciones reservando con antelación.</p>
+    <a class="btn" href="https://www.booking.com" target="_blank">Ver Ofertas</a>
+
+    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.88902672707!2d105.7831076!3d21.0357611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4608be7b35%3A0xfdbc164964d2ad10!2sVietnam!5e0!3m2!1ses!2ses!4v1719860312574!5m2!1ses!2ses" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 VeranoÉpico - Todos los derechos reservados | Web creada para inspirar aventuras.</p>
+  </footer>
+
+</body>
+</html>
